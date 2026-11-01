@@ -33,12 +33,5 @@ Depends: dracut,
          firmware-sof-signed,
          ${misc:Depends}
 Recommends: apparmor
-Suggests: linux-image-@NAME@-common (= ${binary:Version}),
-          firmware-realtek
+Suggests: firmware-realtek
 Description: Linux Kernel for Intel laptops
-
-Package: linux-image-@NAME@-common
-Architecture: amd64
-Depends: systemd,
-         ${misc:Depends}
-Description: Linux Kernel common files for Intel laptops
