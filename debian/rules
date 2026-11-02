@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-NAME := spark
+NAME := snowclad
 LLVM := 22
 JOBS := $(shell nproc)
 
