@@ -1,3 +1,9 @@
+linux (7.3.1-1) stable; urgency=low
+
+  * Updated to 7.3.1.
+
+ -- Maria Lisina <sekoohaka.sarisan@gmail.com>  Sun, 01 Nov 2026 05:46:48 +0000
+
 linux (7.3-5) stable; urgency=low
 
   * Removed all unnecessary packages.
