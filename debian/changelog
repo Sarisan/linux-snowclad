@@ -1,3 +1,9 @@
+linux (7.3.1-2) stable; urgency=low
+
+  * Enabled legacy features for Wine.
+
+ -- Maria Lisina <sekoohaka.sarisan@gmail.com>  Wed, 04 Nov 2026 17:19:03 +0000
+
 linux (7.3.1-1) stable; urgency=low
 
   * Updated to 7.3.1.
