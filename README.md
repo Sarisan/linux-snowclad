@@ -18,6 +18,7 @@ Currently supported laptops
 
 List of external hardware support and features enabled
 
+* IA32 Emulation
 * Virtualization
 * Kernel-based Virtual Machine (KVM) support
 * Clang ThinLTO
