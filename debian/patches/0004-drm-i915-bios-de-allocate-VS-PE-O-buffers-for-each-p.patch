@@ -1,4 +1,4 @@
-From 3b5fb0a1e7bc191e9ca690891568b4bac56b1465 Mon Sep 17 00:00:00 2001
+From cea558afbcdb4921d6e3e30e10a26a65528cd4e5 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Fri, 4 Sep 2026 14:31:44 +0200
 Subject: [PATCH 04/14] drm/i915/bios: de/allocate VS/PE-O buffers for each

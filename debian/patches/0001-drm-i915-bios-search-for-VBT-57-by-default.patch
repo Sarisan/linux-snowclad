@@ -1,4 +1,4 @@
-From 4c86292e749bac9f3c2770e85a72d1c36f47f597 Mon Sep 17 00:00:00 2001
+From d384bec08483ec42bf9e7b063fd38e7414b2422c Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Fri, 4 Sep 2026 14:31:41 +0200
 Subject: [PATCH 01/14] drm/i915/bios: search for VBT #57 by default

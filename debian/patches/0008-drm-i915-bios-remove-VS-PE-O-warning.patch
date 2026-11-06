@@ -1,4 +1,4 @@
-From 912932fbd80bf655efc38fc5da80ba747408133a Mon Sep 17 00:00:00 2001
+From a5692ecd03eb7fe88ddfd1ea1041c023a388efd4 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Fri, 4 Sep 2026 14:31:48 +0200
 Subject: [PATCH 08/14] drm/i915/bios: remove VS/PE-O warning

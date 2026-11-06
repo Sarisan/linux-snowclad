@@ -1,4 +1,4 @@
-From e00b8481f8dae965be8839d15d75538eb32c3cf4 Mon Sep 17 00:00:00 2001
+From 233f1831732dab8e1884646f3d5014524d35d7f1 Mon Sep 17 00:00:00 2001
 From: Masahito S <firelzrd@gmail.com>
 Date: Sat, 19 Sep 2026 00:31:35 +0900
 Subject: [PATCH 14/14] linux7.3-rc2-bore-7.0.0
@@ -23,7 +23,7 @@ Subject: [PATCH 14/14] linux7.3-rc2-bore-7.0.0
  create mode 100644 kernel/sched/bore.c
 
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index d35ae49a991f..659ca7cbd408 100644
+index 78bfc0e32e56..5c77d569d16b 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
 @@ -832,6 +832,32 @@ struct task_ipi_mask {
@@ -193,7 +193,7 @@ index ce1435cb08b1..9eee2005e25f 100644
 +	 an unnecessarily large base slice, resulting in high scheduling
 +	 latency and poor system responsiveness.
 diff --git a/kernel/exit.c b/kernel/exit.c
-index ba1469bea8fb..cebcf5ca031f 100644
+index 25a68e1a9605..fc0e9d168b58 100644
 --- a/kernel/exit.c
 +++ b/kernel/exit.c
 @@ -146,7 +146,11 @@ static void __unhash_process(struct release_task_post *post, struct task_struct
@@ -209,7 +209,7 @@ index ba1469bea8fb..cebcf5ca031f 100644
  	}
  	list_del_rcu(&p->thread_node);
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 33760ece3bb3..77da17b54aa3 100644
+index efe6157fedb4..4a454bfb5b9b 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -120,6 +120,10 @@
@@ -223,7 +223,7 @@ index 33760ece3bb3..77da17b54aa3 100644
  #include <trace/events/sched.h>
  
  #define CREATE_TRACE_POINTS
-@@ -2462,6 +2466,11 @@ __latent_entropy struct task_struct *copy_process(
+@@ -2465,6 +2469,11 @@ __latent_entropy struct task_struct *copy_process(
  	p->start_time = ktime_get_ns();
  	p->start_boottime = ktime_get_boottime_ns();
  
@@ -235,7 +235,7 @@ index 33760ece3bb3..77da17b54aa3 100644
  	/*
  	 * Make it visible to the rest of the system, but dont wake it up yet.
  	 * Need tasklist lock for parent etc handling!
-@@ -2547,7 +2556,11 @@ __latent_entropy struct task_struct *copy_process(
+@@ -2550,7 +2559,11 @@ __latent_entropy struct task_struct *copy_process(
  							 p->real_parent->signal->is_child_subreaper;
  			if (clone_flags & CLONE_AUTOREAP)
  				p->signal->autoreap = 1;

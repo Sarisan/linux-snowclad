@@ -10,5 +10,5 @@
 0010-mfd-intel-lpss-Use-plain-octal-values-for-file-permi.patch
 0011-mfd-intel-lpss-Remove-extra-DebugFS-dentry.patch
 0012-mfd-intel-lpss-Switch-to-debugfs_remove.patch
-0013-platform-x86-Add-Goodix-fingerprint-EC-mailbox-trans.patch
+0013-drivers-misc-Add-GXFP5130-driver.patch
 0014-linux7.3-rc2-bore-7.0.0.patch
