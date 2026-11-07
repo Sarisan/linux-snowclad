@@ -1,8 +1,9 @@
-From 83c390edfd13958e2ba5b809cca770dec0a513d1 Mon Sep 17 00:00:00 2001
+From ac7b8a0ab968b59288ca53420053f7185a70b6dc Mon Sep 17 00:00:00 2001
 From: Maria Lisina <sekoohaka.sarisan@gmail.com>
-Date: Fri, 6 Nov 2026 20:46:33 +0500
+Date: Sun, 8 Nov 2026 01:24:45 +0500
 Subject: [PATCH 13/14] drivers: misc: Add GXFP5130 driver
 
+Signed-off-by: Maria Lisina <sekoohaka.sarisan@gmail.com>
 ---
  drivers/misc/Kconfig      |  11 +
  drivers/misc/Makefile     |   1 +
@@ -13,7 +14,7 @@ Subject: [PATCH 13/14] drivers: misc: Add GXFP5130 driver
  create mode 100644 include/uapi/linux/gxfp.h
 
 diff --git a/drivers/misc/Kconfig b/drivers/misc/Kconfig
-index 7364931dad3a..c2af865c20f3 100644
+index 7364931dad3a..d84d4c87efcd 100644
 --- a/drivers/misc/Kconfig
 +++ b/drivers/misc/Kconfig
 @@ -568,6 +568,17 @@ config MCHP_LAN966X_PCI
@@ -25,11 +26,11 @@ index 7364931dad3a..c2af865c20f3 100644
 +	depends on ACPI
 +	depends on GPIOLIB
 +	help
-+		This option enables support for Goodix GXFP5130 Embedded Controller
-+		(EC) mailbox transport.
++	  This option enables support for Goodix GXFP5130 Embedded Controller
++	  (EC) mailbox transport.
 +
-+		To compile this driver as a module, choose M here: the
-+		module will be called gxfp.
++	  To compile this driver as a module, choose M here: the
++	  module will be called gxfp.
 +
  source "drivers/misc/c2port/Kconfig"
  source "drivers/misc/eeprom/Kconfig"

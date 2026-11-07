@@ -1,4 +1,4 @@
-From bed7906bb95d4c404344059d5319f71e412d2f6f Mon Sep 17 00:00:00 2001
+From b82b639e260d1230ed171a35c2a1e8a6a8a30cff Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Fri, 4 Sep 2026 14:31:45 +0200
 Subject: [PATCH 05/14] drm/i915/buf_trans: add vfunc for VS/PE-O

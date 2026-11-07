@@ -1,4 +1,4 @@
-From 233f1831732dab8e1884646f3d5014524d35d7f1 Mon Sep 17 00:00:00 2001
+From a075a75165e175744e70d1d0529bc1c25ec35edd Mon Sep 17 00:00:00 2001
 From: Masahito S <firelzrd@gmail.com>
 Date: Sat, 19 Sep 2026 00:31:35 +0900
 Subject: [PATCH 14/14] linux7.3-rc2-bore-7.0.0
@@ -209,7 +209,7 @@ index 25a68e1a9605..fc0e9d168b58 100644
  	}
  	list_del_rcu(&p->thread_node);
 diff --git a/kernel/fork.c b/kernel/fork.c
-index efe6157fedb4..4a454bfb5b9b 100644
+index 26b666e98bb8..7168cff8465a 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -120,6 +120,10 @@

@@ -1,4 +1,4 @@
-From a8da92943e506db5fdd163c49901345774e3dd3f Mon Sep 17 00:00:00 2001
+From 1b92ce5fc014583be110ba93032896755f13e476 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Fri, 4 Sep 2026 14:31:46 +0200
 Subject: [PATCH 06/14] drm/i915: override Snps's VS/PE when requested
