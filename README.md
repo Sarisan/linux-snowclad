@@ -3,9 +3,9 @@
 Highly hardened and tailored Linux Kernel for Intel laptops
 
 This kernel also includes fixes for vswing/preemph tables  
-Support for Goodix eSPI fingerprint reader (GXFP5130)  
+Support for Goodix GXFP5130 eSPI fingerprint reader  
 Burst-Oriented Response Enhancer CPU Scheduler  
-And support for some external hardware
+Intel Xe2 Graphics driver default for all devices  
 
 ## Support
 
