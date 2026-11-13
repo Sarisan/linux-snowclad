@@ -38,6 +38,7 @@ List of external hardware support and features enabled
 * USB Winchiphead CH341 Single Port Serial Driver
 * Android Binder IPC Driver
 * Android Binderfs filesystem
+* UDF file system support
 * exFAT filesystem support
 * NTFS Read-Write file system support
 * SquashFS 4.0 - Squashed file system support
