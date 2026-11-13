@@ -1,3 +1,9 @@
+linux (7.3.4-2) stable; urgency=low
+
+  * Enabled UDF file system support.
+
+ -- Maria Lisina <sekoohaka.sarisan@gmail.com>  Fri, 13 Nov 2026 16:49:29 +0000
+
 linux (7.3.4-1) stable; urgency=low
 
   * Updated to 7.3.4.
