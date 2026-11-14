@@ -5,13 +5,9 @@ path=/boot/vmlinuz-${version}
 
 case "${1}" in
     (configure)
-    ;;
-    (*)
-        exit 0
+        linux-update-symlinks install ${version} ${path}
+        linux-run-hooks image postinst ${version} ${path} -- ${@}
     ;;
 esac
-
-linux-update-symlinks install ${version} ${path}
-linux-run-hooks image postinst ${version} ${path} -- ${@}
 
 #DEBHELPER#
