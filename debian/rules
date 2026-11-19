@@ -48,6 +48,7 @@ override_dh_auto_install:
 	rm -f $(CURDIR)/debian/linux-image-$(KERNELRELEASE)/usr/lib/modules/$(KERNELRELEASE)/build
 
 	install -D -m 644 $(CURDIR)/debian/modules-load.conf $(CURDIR)/debian/linux-image-$(NAME)/usr/lib/modules-load.d/$(NAME).conf
+	install -D -m 644 $(CURDIR)/debian/udev.hwdb $(CURDIR)/debian/linux-image-$(NAME)/usr/lib/udev/hwdb.d/60-$(NAME).hwdb
 
 override_dh_installdebconf:
 	@echo "Skipping dh_installdebconf"

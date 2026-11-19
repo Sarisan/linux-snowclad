@@ -1,0 +1,5 @@
+# Huawei Matebook D 14 2023/2024 (MDF-XX/MDG-XX)
+evdev:atkbd:dmi:bvn*:bvr*:bd*:svnHUAWEI:pnMDF-XX:*
+evdev:atkbd:dmi:bvn*:bvr*:bd*:svnHUAWEI:pnMDG-XX:*
+ KEYBOARD_KEY_74=unknown
+ KEYBOARD_KEY_f7=unknown
