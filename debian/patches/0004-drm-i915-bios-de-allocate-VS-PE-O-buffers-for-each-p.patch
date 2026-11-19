@@ -1,7 +1,7 @@
-From ae68970f954ad9d5d3a71ce49246908d14e46099 Mon Sep 17 00:00:00 2001
+From c3e701856a7ae64efeb7929c1683917f8c0c6358 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Fri, 4 Sep 2026 14:31:44 +0200
-Subject: [PATCH 04/14] drm/i915/bios: de/allocate VS/PE-O buffers for each
+Subject: [PATCH 04/16] drm/i915/bios: de/allocate VS/PE-O buffers for each
  port
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
@@ -41,6 +41,8 @@ v4->v5
 Signed-off-by: Michał Grzelak <michal.grzelak@intel.com>
 Reviewed-by: Suraj Kandpal <suraj.kandpal@intel.com>
 Acked-by: Jani Nikula <jani.nikula@intel.com>
+Signed-off-by: Suraj Kandpal <suraj.kandpal@intel.com>
+Link: https://patch.msgid.link/20260904123148.2165596-5-michal.grzelak@intel.com
 ---
  drivers/gpu/drm/i915/display/intel_bios.c | 31 +++++++++++++++++++++++
  1 file changed, 31 insertions(+)

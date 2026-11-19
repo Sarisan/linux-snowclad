@@ -1,13 +1,15 @@
-From 28f083ca150319e1e6ed7a45b7405a4fecba2f87 Mon Sep 17 00:00:00 2001
+From d192205fdc667627f7a2892795daf953b4028701 Mon Sep 17 00:00:00 2001
 From: Maria Lisina <sekoohaka.sarisan@gmail.com>
 Date: Wed, 16 Sep 2026 21:23:49 +0500
-Subject: [PATCH 11/14] mfd: intel-lpss: Remove extra DebugFS dentry
+Subject: [PATCH 11/16] mfd: intel-lpss: Remove extra DebugFS dentry
 
 There is no point to keep the variable dir just to assing
 lpss->debugfs to it later, just use lpss->debugfs directly.
 
-Reviewed-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
 Signed-off-by: Maria Lisina <sekoohaka.sarisan@gmail.com>
+Reviewed-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+Link: https://patch.msgid.link/20260916-intel-lpss-debugfs-v7-3-eb51d41f55e0@gmail.com
+Signed-off-by: Lee Jones <lee@kernel.org>
 ---
  drivers/mfd/intel-lpss.c | 12 ++++--------
  1 file changed, 4 insertions(+), 8 deletions(-)

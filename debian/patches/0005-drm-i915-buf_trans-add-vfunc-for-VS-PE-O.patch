@@ -1,7 +1,7 @@
-From b82b639e260d1230ed171a35c2a1e8a6a8a30cff Mon Sep 17 00:00:00 2001
+From 1ae51da140790c0b9b73fc75b045744c6f1c3eea Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Micha=C5=82=20Grzelak?= <michal.grzelak@intel.com>
 Date: Fri, 4 Sep 2026 14:31:45 +0200
-Subject: [PATCH 05/14] drm/i915/buf_trans: add vfunc for VS/PE-O
+Subject: [PATCH 05/16] drm/i915/buf_trans: add vfunc for VS/PE-O
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -24,6 +24,8 @@ Suggested-by: Jani Nikula <jani.nikula@intel.com>
 Signed-off-by: Michał Grzelak <michal.grzelak@intel.com>
 Reviewed-by: Suraj Kandpal <suraj.kandpal@intel.com>
 Acked-by: Jani Nikula <jani.nikula@intel.com>
+Signed-off-by: Suraj Kandpal <suraj.kandpal@intel.com>
+Link: https://patch.msgid.link/20260904123148.2165596-6-michal.grzelak@intel.com
 ---
  drivers/gpu/drm/i915/display/intel_ddi_buf_trans.c | 8 ++++++++
  drivers/gpu/drm/i915/display/intel_display_types.h | 3 +++

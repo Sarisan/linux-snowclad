@@ -1,7 +1,7 @@
-From ac7b8a0ab968b59288ca53420053f7185a70b6dc Mon Sep 17 00:00:00 2001
+From 88d027f8e1678e856e705c4045569194ff3dee2a Mon Sep 17 00:00:00 2001
 From: Maria Lisina <sekoohaka.sarisan@gmail.com>
 Date: Sun, 8 Nov 2026 01:24:45 +0500
-Subject: [PATCH 13/14] drivers: misc: Add GXFP5130 driver
+Subject: [PATCH 15/16] misc: Add GXFP5130 transport
 
 Signed-off-by: Maria Lisina <sekoohaka.sarisan@gmail.com>
 ---

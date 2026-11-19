@@ -1,0 +1,80 @@
+From ec746acbe07b55cdf61d25a6051bffc84b499b81 Mon Sep 17 00:00:00 2001
+From: Maria Lisina <sekoohaka.sarisan@gmail.com>
+Date: Thu, 19 Nov 2026 19:36:08 +0500
+Subject: [PATCH 14/16] platform/x86: huawei-wmi: Fix keymap for MDF-XX/MDG-XX
+
+Signed-off-by: Maria Lisina <sekoohaka.sarisan@gmail.com>
+---
+ drivers/platform/x86/huawei-wmi.c | 47 +++++++++----------------------
+ 1 file changed, 14 insertions(+), 33 deletions(-)
+
+diff --git a/drivers/platform/x86/huawei-wmi.c b/drivers/platform/x86/huawei-wmi.c
+index 8eb0bd607774..144454a7198a 100644
+--- a/drivers/platform/x86/huawei-wmi.c
++++ b/drivers/platform/x86/huawei-wmi.c
+@@ -135,48 +135,29 @@ enum {
+ };
+ 
+ static const struct key_entry huawei_wmi_keymap[] = {
+-	{ KE_KEY,     0x109,              { KEY_BATTERY } },
+ 	{ KE_KEY,     0x281,              { KEY_BRIGHTNESSDOWN } },
+ 	{ KE_KEY,     0x282,              { KEY_BRIGHTNESSUP } },
+-	{ KE_KEY,     0x283,              { KEY_TOUCHPAD_ON } },
+-	{ KE_KEY,     0x2a3,              { KEY_TOUCHPAD_OFF } },
+ 	{ KE_KEY,     0x284,              { KEY_MUTE } },
+ 	{ KE_KEY,     0x285,              { KEY_VOLUMEDOWN } },
+ 	{ KE_KEY,     0x286,              { KEY_VOLUMEUP } },
+ 	{ KE_KEY,     0x287,              { KEY_MICMUTE } },
+-	{ KE_KEY,     0x288,              { KEY_CAMERA_ACCESS_TOGGLE } },
+ 	{ KE_KEY,     0x289,              { KEY_WLAN } },
+ 	// Huawei |M| key
+-	{ KE_KEY,     0x28a,              { KEY_CONTROLPANEL } },
+-	// Sidebar (notifications) key
+-	{ KE_KEY,     0x28b,              { KEY_NOTIFICATION_CENTER } },
+-	{ KE_KEY,     0x28e,              { KEY_SELECTIVE_SCREENSHOT } },
+-	// Keyboard backlight (F-keys)
+-	{ KE_IGNORE,  KBDLIGHT_KEY_0,     { KEY_KBDILLUMTOGGLE } },
+-	{ KE_IGNORE,  KBDLIGHT_KEY_1,     { KEY_KBDILLUMDOWN } },
+-	{ KE_IGNORE,  KBDLIGHT_KEY_2,     { KEY_KBDILLUMUP } },
++	{ KE_KEY,     0x28a,              { KEY_CONFIG } },
+ 	// Power unlock (Fn+P)
+-	{ KE_KEY,     0x2a0,              { KEY_PROG1 } },
+-	{ KE_KEY,     0x2a1,              { KEY_PROG1 } },
+-	{ KE_KEY,     0x2a6,              { KEY_PROG1 } },
+-	// Refresh rate (Fn+R)
+-	{ KE_KEY,     0x2a7,              { KEY_REFRESH_RATE_TOGGLE } },
+-	// Keyboard backlight (space bar, toggles in that order)
+-	{ KE_KEY,     KBDLIGHT_KEY_OFF,   { KEY_KBDILLUMTOGGLE } },
+-	{ KE_KEY,     KBDLIGHT_KEY_AUTO,  { KEY_KBDILLUMTOGGLE } },
+-	{ KE_IGNORE,  KBDLIGHT_KEY_LOW,   { KEY_KBDILLUMDOWN } },
+-	{ KE_IGNORE,  KBDLIGHT_KEY_HIGH,  { KEY_KBDILLUMUP } },
+-	{ KE_KEY,     0x2b5,              { KEY_VOICECOMMAND } },
+-	{ KE_KEY,     0x2bc,              { KEY_CAMERA_ACCESS_ENABLE } },
+-	{ KE_KEY,     0x2bd,              { KEY_CAMERA_ACCESS_DISABLE } },
+-	// Ignore Ambient Light Sensoring
+-	{ KE_IGNORE,  0x2c1,              { KEY_RESERVED } },
+-	{ KE_KEY,     0x2c3,              { KEY_FIND } },
+-	// Camera module slot
+-	{ KE_KEY,     0x2e0,              { KEY_CAMERA_ACCESS_ENABLE } },
+-	{ KE_KEY,     0x2e1,              { KEY_CAMERA_ACCESS_DISABLE } },
+-	{ KE_KEY,     0x2e2,              { KEY_PROG2 } },
+-	{ KE_KEY,     0x2e3,              { KEY_PROG3 } },
++	{ KE_KEY,     0x2a0,              { KEY_PROG2 } },
++	{ KE_KEY,     0x2a1,              { KEY_PROG2 } },
++	// Accessory button between F6 and F7
++	{ KE_KEY,     0x2b5,              { KEY_PROG1 } },
++	// Ignore unrecognized events triggered without user interaction
++	{ KE_IGNORE,  0x2a3,              { KEY_UNKNOWN } },
++	{ KE_IGNORE,  0x2bb,              { KEY_UNKNOWN } },
++	{ KE_IGNORE,  0x380,              { KEY_UNKNOWN } },
++	{ KE_IGNORE,  0x381,              { KEY_UNKNOWN } },
++	{ KE_IGNORE,  0x382,              { KEY_UNKNOWN } },
++	{ KE_IGNORE,  0x383,              { KEY_UNKNOWN } },
++	{ KE_IGNORE,  0x384,              { KEY_UNKNOWN } },
++	{ KE_IGNORE,  0x385,              { KEY_UNKNOWN } },
+ 	{ KE_END, 0 }
+ };
+ 
+-- 
+2.47.3
+
