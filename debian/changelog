@@ -1,3 +1,12 @@
+linux (7.3.5-1) stable; urgency=low
+
+  * Updated to 7.3.5.
+  * Added udev hwdb.
+  * Updated patches.
+  * Fixed maintainer scripts.
+
+ -- Maria Lisina <sekoohaka.sarisan@gmail.com>  Thu, 19 Nov 2026 22:25:45 +0000
+
 linux (7.3.4-2) stable; urgency=low
 
   * Enabled UDF file system support.
