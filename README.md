@@ -80,11 +80,10 @@ SecureBootCertificate=/etc/kernel/secure-boot-certificate.pem
 SignKernel=true
 ```
 
-Nuke your ESP wherever it's mounted, make sure /boot is not an ESP, e.g. for me it's /efi
+Nuke your ESP wherever it's mounted, make sure /boot is not an ESP, e.g. for me it's /efi, usually /boot/efi
 ```
 rm -fr /efi/*
 ```
-It's usually mounted as /boot/efi
 
 Generate secure boot key
 ```
@@ -101,6 +100,7 @@ Install systemd-boot
 bootctl install --secure-boot-auto-enroll=yes --certificate=/etc/kernel/secure-boot-certificate.pem --private-key=/etc/kernel/secure-boot-private-key.pem
 ```
 
+Configure systemd-boot  
 `ESP/loader/loader.conf`: ESP is the path to your ESP
 ```
 timeout 0
@@ -116,6 +116,34 @@ dpkg-reconfigure linux-image-$(uname -r)
 Go to UEFI and change Secure Boot to Disabled, this will put it to Setup Mode  
 Next time you boot systemd-boot will automatically enroll your secure boot key  
 You won't have to repeat any of these unless you're upgrading Debian to next major verison
+
+## Display Overclocking
+
+You can safely overclock display up to 70 Hz  
+`cmn36b3.bin` is an EDID data containing additional DTD with 70 Hz
+
+First verify this EDID matches your display  
+The quickest way to do it using fastfetch  
+If it says CMN36B3 in display section you can proceed further
+
+Place `cmn36b3.bin` to `/usr/lib/firmware/edid`
+
+Configure dracut to include and use this EDID  
+`/etc/dracut.conf.d/edid.conf`:
+```
+kernel_cmdline+=" drm.edid_firmware=eDP-1:edid/cmn36b3.bin "
+install_items+=" /lib/firmware/edid/cmn36b3.bin "
+```
+
+If you use ukify omit `kernel_cmdline` and append its content to `/etc/kernel/cmdline` instead  
+Similarly to secure boot example above
+
+Regenerate current UKI/initrd
+```
+dpkg-reconfigure linux-image-$(uname -r)
+```
+
+After restart you can go to display settings and select 70 Hz
 
 ## Building
 
