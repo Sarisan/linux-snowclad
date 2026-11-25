@@ -11,8 +11,8 @@ Intel Xe2 Graphics driver default for all devices
 
 Currently supported laptops
 
-* Huawei Matebook D 14 2023 (MDF-XX)
-* Huawei Matebook D 14 2024 (MDG-XX)
+* HUAWEI MateBook D 14 2023 (MDF-XX)
+* HUAWEI MateBook D 14 2024 (MDG-XX)
 
 ## External
 
