@@ -1,3 +1,9 @@
+linux (7.3.6-2) stable; urgency=low
+
+  * Reviewed security options.
+
+ -- Maria Lisina <sekoohaka.sarisan@gmail.com>  Fri, 27 Nov 2026 23:45:56 +0000
+
 linux (7.3.6-1) stable; urgency=low
 
   * Updated to 7.3.6.
